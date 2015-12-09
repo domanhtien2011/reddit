@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'bootstrap-sass'
 # Use Devise
 gem 'devise'
+# Simple form
+gem 'simple_form'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Acts as votable
