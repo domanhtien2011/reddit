@@ -1,14 +1,17 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Bootstrap
 gem 'bootstrap-sass'
+# Use Act as votable gem
+gem 'acts_as_votable'
 # Use Devise
 gem 'devise'
+# Rubocop
+gem 'rubocop'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
