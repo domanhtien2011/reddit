@@ -76,7 +76,6 @@ class LinksController < ApplicationController
   end
 
   private
-
   # Use callbacks to share common setup or constraints between actions.
   def set_link
     @link = Link.find(params[:id])
@@ -91,4 +90,13 @@ class LinksController < ApplicationController
   def link_params
     params.require(:link).permit(:title, :url)
   end
+    def authorized_user
+      @link = current_user.links.find_by(id: params[:id])
+      redirect_to links_path, notice: "Not authorized to edit this link" if @link.nil?
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def link_params
+      params.require(:link).permit(:title, :url)
+    end
 end
